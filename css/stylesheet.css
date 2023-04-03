@@ -1,0 +1,334 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+a:link, a:visited {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+a:hover {
+  color: rgb(4, 61, 83);
+  background-color: transparent;
+  text-decoration: none;
+}
+a:active {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+body {
+  height: 100%;
+}
+ul {
+  list-style-type: none;
+}
+nav {
+  grid-area: nav;
+}
+section{
+  grid-area: section;
+}
+main {
+  grid-area: main;
+}
+footer {
+  grid-area: footer;
+}
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "nav nav nav nav"
+    "section section section section"
+    "main main main main"
+    "footer footer footer footer";
+}
+/******** start of the nav ********/
+
+/*different style 1*/
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  background-color: rgb(0, 0, 0);  
+  text-transform: capitalize;
+}
+.navbar div a{
+  color: white;
+}
+.brand-title{
+  font-size: 2.4rem;
+  margin: .5rem;
+
+}
+.navbar-links ul{
+  display: flex;
+}
+.navbar-links li{
+  list-style: none;
+}
+.navbar-links li a{
+  text-decoration: none;
+  color: white;
+  padding: 1.4rem;
+  display: block;
+}
+.navbar-links li:hover{
+  background-color: rgba(150, 150, 150, 0.507);
+}
+
+
+/* nav {  
+  background-color:rgba(117, 168, 165, 0.589);
+  color: rgb(0, 0, 0);
+  width: 100%;
+  height: auto;
+}
+nav h2 {  
+  text-shadow: rgba(87, 109, 100, 0.452) 2px 2px;
+  padding: 6px 4vw;
+  margin-left: 6vw;
+  display: inline-block;
+  letter-spacing: 1px;
+  font-size: 40px;
+}
+nav ul {
+  position: relative;
+  float: right;
+  align-content: center;
+  margin-right: 3vw;
+}
+nav ul li {  
+  text-shadow: rgb(66, 50, 50) 1px 1px;
+  color: black;
+  font-weight: bold;
+  font-size: 20px; 
+  float: left;
+  padding: 18px 4vw;  
+  text-transform: capitalize;
+}
+nav a {
+  display: inline-block; 
+}
+nav ul li:hover, nav h2:hover{
+  background-color: rgba(108, 141, 139, 0.384);
+} */
+/******** end of the nav ********/
+
+
+/******** start of the section ********/
+section{
+  background-image: url("../pictures/background2.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  height: 90vh;
+}
+section > div {
+  background-color: rgba(131, 187, 187, 0.733);
+  width: 26vw;
+  height: 300px;
+  margin: 60px;
+  border-radius: 5px;
+  padding: 10px;
+  position: absolute;
+  bottom: 0;
+  left: 2vw;
+  animation-name: signUp;
+  animation-duration: 2s;
+}
+@keyframes signUp {
+  from {
+    left: -10vw;
+  }
+  to {
+    left: 2vw;
+  }
+}
+form {
+  width: 90%;
+  height: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+h3 {
+  /*sign up*/
+  width: 90%;
+  font-size: 24px;
+  font-family: sans-serif;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 16px;
+  padding-bottom: 10px;
+}
+label {
+  font-size: 20px;
+  font-family: sans-serif;
+  font-weight: 600;
+}
+input {
+  width: 96%;
+  height: 40px;
+  border-radius: 5px;
+  font-family: sans-serif;
+  font-size: 16px;
+}
+input[type="submit"] {
+  width: 98%;
+  margin-left: auto;
+  margin-right: auto;
+}
+section div p {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding-bottom: 10px;
+}
+/******** end of the section ********/
+
+
+/******** start of the main ********/
+main {
+  background-color: rgba(122, 222, 255, 0.3);
+  min-height: 100vh;
+  overflow: auto;
+  padding: 40px;
+}
+.item1 {
+  grid-area: item1;
+}
+.item2 {
+  grid-area: item2;
+}
+.item3 {
+  grid-area: item3;
+}
+.item4 {
+  grid-area: item4;
+}
+.item5 {
+  grid-area: item5;
+}
+.item6 {
+  grid-area: item6;
+}
+.item7 {
+  grid-area: item7;
+}
+.item8 {
+  grid-area: item8;
+}
+.travel-places {
+  display: grid;
+  grid-template-areas:
+    "item1 item2 item3 item4"
+    "item5 item6 item7 item8";
+  padding: 20px;
+  justify-content: space-evenly;
+  row-gap: 40px;
+}
+.travel-places div {
+  width: 80%;
+  height: 100%;
+  background-color: rgba(127, 255, 212, 0.548);
+  border-radius: 4px;
+  align-content: center;
+  padding: 10px;
+  margin: 10px;
+}
+.travel-places div:hover {
+  box-shadow: 20px 20px 40px rgb(48, 62, 109);
+}
+.travel-places div img {
+  display: block;
+  width: 80%;
+  border-radius: 4px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+.travel-places div p {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  font-family: Lora, serif;
+  font-size: 18px;
+}
+.tour-type {
+  color: hsl(100, 100, 100);
+}
+.tour-description {
+  background-color: chartreuse;
+}
+.price {
+  position: inherit;
+  bottom: 0;
+  left: 0;
+  color: rgba(1, 12, 43, 0.904);
+}
+/******** end of the main ********/
+
+
+/******** start of the footer ********/
+.footerHeader {
+  grid-area: footerHeader;
+}
+.footerIcons {
+  grid-area: footerIcons;
+}
+footer {
+  background-color: rgba(6, 43, 44, 0.76);
+  position: relative;
+  height: 100px;
+  clear: both;
+  display: grid;
+  grid-template-areas: "footerHeader footerIcons";
+  padding: 40px;
+  align-content: center;
+}
+.footerHeader {
+  width: 60%;
+  font-size: 30px;
+  text-transform: capitalize;
+  margin-left: auto;
+  margin-right: auto;
+}
+.footerHeader p {
+  font-size: 16px;
+}
+.footerIcons {
+  width: 80%;
+  font-size: 20px;
+  text-transform: capitalize;
+  margin-right: auto;
+  margin-left: auto;
+}
+.footerIcons img {
+  width: 30px;
+  height: 30px;
+  padding-right: 5px;
+  padding-top: 10px;
+}
+/******** end of the footer ********/
+
+/********** responsive rules **********/
+@media screen and (max-width: 1500px) {
+  section{
+    background-size: 100% 100%;
+    height: 90vh;
+  }
+}
+@media screen and (max-width: 992px) {
+  section{
+    background-size: auto auto;
+    height: 80vh;
+  }
+  nav li a {
+    display: block;
+    width: 100%;
+  }
+}
