@@ -1,0 +1,251 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+a:link {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+a:visited {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+a:hover {
+  color: rgb(4, 61, 83);
+  background-color: transparent;
+  text-decoration: none;
+}
+a:active {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+html,
+body {
+  height: 100%;
+}
+ul {
+  list-style-type: none;
+}
+header {
+  grid-area: header;
+}
+main {
+  grid-area: main;
+}
+footer {
+  grid-area: footer;
+}
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "header header header header"
+    "main main main main"
+    "footer footer footer footer";
+}
+header {
+  background-image: url("../pictures/sun_voyager.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-color: lightslategray;
+  width: 100%;
+  height: 98vh;
+  margin: auto;
+}
+header h2 {
+  text-shadow: rgba(90, 154, 175, 0.3) 2px 2px;
+  padding: 40px 140px;
+  display: inline-block;
+  letter-spacing: 1px;
+  font-size: 34px;
+}
+header ul {
+  float: right;
+  padding: 40px 80px;
+}
+header ul li {
+  text-shadow: rgb(66, 50, 50) 1px 1px;
+  font-weight: bold;
+  font-size: 18px;
+  float: left;
+  padding: 10px 40px;
+  font-family: sans-serif;
+  text-transform: capitalize;
+}
+main {
+  background-color: rgba(122, 222, 255, 0.3);
+  min-height: 100vh;
+  overflow: auto;
+  padding: 40px;
+}
+.item1 {
+  grid-area: item1;
+}
+.item2 {
+  grid-area: item2;
+}
+.item3 {
+  grid-area: item3;
+}
+.item4 {
+  grid-area: item4;
+}
+.item5 {
+  grid-area: item5;
+}
+.item6 {
+  grid-area: item6;
+}
+.item7 {
+  grid-area: item7;
+}
+.item8 {
+  grid-area: item8;
+}
+.travel-places {
+  display: grid;
+  grid-template-areas:
+    "item1 item2 item3 item4"
+    "item5 item6 item7 item8";
+  padding: 20px;
+  justify-content: space-evenly;
+  row-gap: 40px;
+}
+.travel-places div {
+  width: 80%;
+  height: 100%;
+  background-color: rgba(127, 255, 212, 0.548);
+  border-radius: 4px;
+  align-content: center;
+  padding: 10px;
+  margin: 10px;
+}
+.travel-places div:hover {
+  box-shadow: 20px 20px 40px rgb(48, 62, 109);
+}
+.travel-places div img {
+  display: block;
+  width: 80%;
+  border-radius: 4px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+.travel-places div p {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}
+.tour-type {
+  color: hsl(100, 100, 100);
+}
+.tour-description {
+  background-color: chartreuse;
+}
+header > div {
+  background-color: rgba(163, 223, 223, 0.144);
+  width: 26vw;
+  height: 50vh;
+  margin: 60px;
+  border-radius: 5px;
+  padding: 10px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  animation-name: signUp;
+  animation-duration: 2s;
+}
+@keyframes signUp {
+  from {
+    right: -10vw;
+  }
+  to {
+    right: 0;
+  }
+}
+form {
+  width: 90%;
+  height: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+h3 {
+  width: 90%;
+  font-size: 30px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 10px;
+}
+label {
+  font-size: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 600;
+}
+input {
+  width: 96%;
+  height: 40px;
+  border-radius: 5px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+}
+input[type="submit"] {
+  width: 98%;
+  margin-left: auto;
+  margin-right: auto;
+}
+header div p {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding-bottom: 10px;
+}
+.price {
+  position: inherit;
+  bottom: 0;
+  left: 0;
+  color: rgba(1, 12, 43, 0.904);
+}
+.footerHeader {
+  grid-area: footerHeader;
+}
+.footerIcons {
+  grid-area: footerIcons;
+}
+footer {
+  background-color: rgba(6, 43, 44, 0.76);
+  position: relative;
+  height: 100px;
+  clear: both;
+  display: grid;
+  grid-template-areas: "footerHeader footerIcons";
+  padding: 40px;
+  align-content: center;
+}
+.footerHeader {
+  width: 60%;
+  font-size: 30px;
+  text-transform: capitalize;
+  margin-left: auto;
+  margin-right: auto;
+}
+.footerHeader p {
+  font-size: 16px;
+}
+.footerIcons {
+  width: 80%;
+  font-size: 20px;
+  text-transform: capitalize;
+  margin-right: auto;
+  margin-left: auto;
+}
+.footerIcons img {
+  width: 30px;
+  height: 30px;
+  padding-right: 5px;
+  padding-top: 10px;
+}
