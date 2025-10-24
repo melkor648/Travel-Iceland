@@ -145,7 +145,7 @@ main {
 .tour-description {
   background-color: chartreuse;
 }
-header > div {
+header > section {
   background-color: rgba(163, 223, 223, 0.144);
   width: 26vw;
   height: 50vh;
@@ -197,7 +197,7 @@ input[type="submit"] {
   margin-left: auto;
   margin-right: auto;
 }
-header div p {
+header section p {
   width: 90%;
   margin-left: auto;
   margin-right: auto;
